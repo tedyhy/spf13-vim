@@ -1,4 +1,4 @@
-REM    Copyright 2014 Steve Francia
+REM    Copyright 2017 Tedyhy 
 REM 
 REM    Licensed under the Apache License, Version 2.0 (the "License");
 REM    you may not use this file except in compliance with the License.
@@ -16,12 +16,12 @@ REM    limitations under the License.
 @if not exist "%HOME%" @set HOME=%HOMEDRIVE%%HOMEPATH%
 @if not exist "%HOME%" @set HOME=%USERPROFILE%
 
-@set APP_PATH=%HOME%\.spf13-vim-3
+@set APP_PATH=%HOME%\.tedyhy-vim-6
 IF NOT EXIST "%APP_PATH%" (
-    call git clone -b 3.0 https://github.com/spf13/spf13-vim.git "%APP_PATH%"
+    call git clone -b 6.0 https://github.com/tedyhy/tedyhy-vim.git "%APP_PATH%"
 ) ELSE (
     @set ORIGINAL_DIR=%CD%
-    echo updating spf13-vim
+    echo updating tedyhy-vim
     chdir /d "%APP_PATH%"
     call git pull
     chdir /d "%ORIGINAL_DIR%"

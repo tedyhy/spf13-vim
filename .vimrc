@@ -1,20 +1,11 @@
 " Modeline and Notes {
 " vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker spell:
 "
-"                    __ _ _____              _
-"         ___ _ __  / _/ |___ /      __   __(_)_ __ ___
-"        / __| '_ \| |_| | |_ \ _____\ \ / /| | '_ ` _ \
-"        \__ \ |_) |  _| |___) |_____|\ V / | | | | | | |
-"        |___/ .__/|_| |_|____/        \_/  |_|_| |_| |_|
-"            |_|
-"
 "   This is the personal .vimrc file of Steve Francia.
 "   While much of it is beneficial for general use, I would
 "   recommend picking out the parts you want and understand.
 "
-"   You can find me at http://spf13.com
-"
-"   Copyright 2014 Steve Francia
+"   Copyright 2017 Tedyhy 
 "
 "   Licensed under the Apache License, Version 2.0 (the "License");
 "   you may not use this file except in compliance with the License.
@@ -479,7 +470,6 @@
             au FileType go nmap <leader>co <Plug>(go-coverage)
         endif
         " }
-
 
     " TextObj Sentence {
         if count(g:spf13_bundle_groups, 'writing')
