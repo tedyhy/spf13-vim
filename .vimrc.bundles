@@ -291,6 +291,7 @@
     " Prettier {
         if count(g:spf13_bundle_groups, 'prettier')
             Bundle 'prettier/vim-prettier'
+            let g:prettier#config#semi = 'false'
         endif
     " }
 
