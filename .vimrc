@@ -168,7 +168,6 @@
 
 " }
 
-
 " Key (re)Mappings {
 
   " The default leader is '\', but many people prefer ',' as it's in a standard
@@ -352,10 +351,9 @@
 
 " }
 
-
 " Plugins {
 
-  " GoLang {
+  " Programming {
     if count(g:spf13_bundle_groups, 'programming')
 
       " syntastic {
@@ -601,25 +599,26 @@
           else
             " existing text matching
             if neosnippet#expandable_or_jumpable()
-                return "\<Plug>(neosnippet_expand_or_jump)"
+              return "\<Plug>(neosnippet_expand_or_jump)"
             else
-                return neocomplete#start_manual_complete()
+              return neocomplete#start_manual_complete()
             endif
           endif
         endfunction
 
         imap <expr> <Tab> CleverTab()
-    " }
+      " }
 
-    " Enable heavy omni completion.
-    if !exists('g:neocomplete#sources#omni#input_patterns')
+      " Enable heavy omni completion.
+      if !exists('g:neocomplete#sources#omni#input_patterns')
         let g:neocomplete#sources#omni#input_patterns = {}
+      endif
+      let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+      let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+      let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+      let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+      let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
     endif
-    let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-    let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-    let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-    let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-    let g:neocomplete#sources#omni#input_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
   " }
 
   " UndoTree {
@@ -665,6 +664,12 @@
         let g:airline_left_sep='›'  " Slightly fancier than '>'
         let g:airline_right_sep='‹' " Slightly fancier than '<'
       endif
+    endif
+  " }
+
+  " vim-airline {
+    if isdirectory(expand("~/.vim/bundle/vim-jsx/"))
+      let g:jsx_ext_required = 1
     endif
   " }
 

@@ -175,4 +175,4 @@ sync_repo "$HOME/.vim/bundle/vundle" \
 setup_vundle "$APP_PATH/.vimrc.bundles.default"
 
 msg       "\nThanks for installing $app_name."
-msg       "© `date +%Y` http://vim.spf13.com/"
+msg       "© `date +%Y` https://github.com/tedyhy/tedyhy-vim"

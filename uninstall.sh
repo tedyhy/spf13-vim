@@ -3,12 +3,12 @@
 app_dir="$HOME/.tedyhy-vim-8"
 
 warn() {
-    echo "$1" >&2
+  echo "$1" >&2
 }
 
 die() {
-    warn "$1"
-    exit 1
+  warn "$1"
+  exit 1
 }
 
 rm $HOME/.vimrc
