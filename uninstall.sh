@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-app_dir="$HOME/.tedyhy-vim-3"
+app_dir="$HOME/.tedyhy-vim-8"
 
 warn() {
     echo "$1" >&2
